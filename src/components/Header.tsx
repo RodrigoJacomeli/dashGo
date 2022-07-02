@@ -1,5 +1,5 @@
-import { Flex, Input, Text, Icon } from "@chakra-ui/react";
-import { RiSearchLine } from "react-icons/ri";
+import { Flex, Input, Text, Icon, HStack, Box, Avatar } from "@chakra-ui/react";
+import { RiNotificationLine, RiSearchLine, RiUserAddLine } from "react-icons/ri";
 
 export function Header() {
   return (
@@ -40,7 +40,23 @@ export function Header() {
           px="4"
           mr="4"
         />
-        <Icon as={RiSearchLine} fontSize="20"/>
+        <Icon as={RiSearchLine} fontSize="20" />
+      </Flex>
+
+      <Flex align="center" ml="auto" >
+        <HStack spacing="8" mx="8" pr="8" py="1" color="gray.300" borderRightWidth={1} borderColor="gray.700">
+          <Icon as={RiNotificationLine} />
+          <Icon as={RiUserAddLine} />
+        </HStack>
+
+        <Flex align="center">
+          <Box mr="4" textAlign="right">
+            <Text>Rodrigo Jacomeli</Text>
+            <Text color="gray.300" fontSize="small">rodrigo.devvga@gmail.com</Text>
+          </Box>
+
+          <Avatar size="md" name="Rodrigo Jacomeli" src="https://github.com/RodrigoJacomeli" />
+        </Flex>
       </Flex>
     </Flex>
   );
