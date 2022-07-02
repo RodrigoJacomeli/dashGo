@@ -33,7 +33,7 @@ export function Header() {
 
       {isWideVersion && <SearchBox />}
 
-      <Flex align="center" ml="auto" >
+      <Flex align="center" ml="auto" mr="4">
         <NotificationNav />
         <Profile showProfileData={isWideVersion} />
       </Flex>
